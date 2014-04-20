@@ -52,8 +52,10 @@ $(document).ready(function(){
       var currentMinutes = currentTime.getMinutes();
       currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
       var currentAmPm =  " am";      
-      if(currentHours > 12){
+      if(currentHours > 11){
         currentAmPm = " pm" ;
+      }
+      if(currentHours > 12){
         currentHours = currentHours - 12
       }
        
@@ -224,7 +226,7 @@ $(document).ready(function(){
       html += c;
       html += "&deg; C / </span>";
       html += cToF(c);
-      html += "&deg; ";
+      html += "&deg; F";
       html += "</em>";
 
       $("header").prepend(html);
