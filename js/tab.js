@@ -55,7 +55,10 @@ $(document).ready(function(){
       if(currentHours > 11){
         currentAmPm = " pm" ;
       }
-      if(currentHours > 12){
+      if(currentHours = 24){
+        currentHours = "12"
+      }
+      else if(currentHours > 12){
         currentHours = currentHours - 12
       }
        
